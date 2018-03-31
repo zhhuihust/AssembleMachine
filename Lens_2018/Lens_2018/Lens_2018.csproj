@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2038502-442B-4EB8-A1E4-7C895CEC2821}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lens_2018</RootNamespace>
+    <AssemblyName>Lens_2018</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aerotech.A3200">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Aerotech.A3200.dll</HintPath>
+    </Reference>
+    <Reference Include="Aerotech.A3200.resources">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Aerotech.A3200.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Aerotech.Common">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Aerotech.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.CalibFix">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.CalibFix.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.CalibFix.Controls">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.CalibFix.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.CalibFixPlus">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.CalibFixPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Caliper">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.Caliper.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Caliper.Controls">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.Caliper.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Controls">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Core">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.CorePlus">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.CorePlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Database">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Display.Controls">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.Display.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.FGGigE">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.FGGigE.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.ImageFile">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.ImageFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.ImageProcessing">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.ImageProcessing.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Inspection">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.Inspection.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Inspection.Controls">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.Inspection.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.PMAlign">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.PMAlign.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.PMAlign.Controls">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.PMAlign.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.ToolGroup">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.ToolGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.ToolGroup.Controls">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro.ToolGroup.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro3D">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro3D.Core">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro3D.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro3D.Display.Controls">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro3D.Display.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro3D.Graphic">
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\Cognex.VisionPro3D.Graphic.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\lens_new_20171129\lens_new_20171129\lens_new\bin\Debug\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\CameraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CameraForm.Designer.cs">
+      <DependentUpon>CameraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\GlobalData.cs" />
+    <Compile Include="Class\ExceptionClass.cs" />
+    <Compile Include="Forms\Desktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Desktop.Designer.cs">
+      <DependentUpon>Desktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\CameraOperation.cs" />
+    <Compile Include="Class\CommandClass.cs" />
+    <Compile Include="Class\ExcelOperation.cs" />
+    <Compile Include="Class\LogOperation.cs" />
+    <Compile Include="Class\MethodOperation.cs" />
+    <Compile Include="Class\MySQL.cs" />
+    <Compile Include="Forms\LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParameterForm.Designer.cs">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ProcessClass.cs" />
+    <Compile Include="Class\Program.cs" />
+    <Compile Include="Forms\PartDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PartDisplay.Designer.cs">
+      <DependentUpon>PartDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaskForm.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\SystemCheck.cs" />
+    <Compile Include="Class\TimeDelay.cs" />
+    <Compile Include="Class\XMLOperation.cs" />
+    <Compile Include="UserControls\AOffsetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AOffsetControl.Designer.cs" />
+    <Compile Include="UserControls\AutoAngle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AutoAngle.Designer.cs" />
+    <Compile Include="UserControls\AxisDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AxisDisplay.Designer.cs" />
+    <Compile Include="UserControls\CameraSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CameraSet.Designer.cs" />
+    <Compile Include="UserControls\HolderOffset.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HolderOffset.Designer.cs" />
+    <Compile Include="UserControls\HolderPlat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HolderPlat.Designer.cs" />
+    <Compile Include="UserControls\IOControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\IOControl.Designer.cs" />
+    <Compile Include="UserControls\OffsetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OffsetControl.Designer.cs" />
+    <Compile Include="UserControls\OpticalSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OpticalSet.Designer.cs" />
+    <Compile Include="UserControls\Other.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Other.Designer.cs" />
+    <Compile Include="UserControls\PartCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PartCheck.Designer.cs" />
+    <Compile Include="UserControls\PartName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PartName.Designer.cs" />
+    <Compile Include="UserControls\PartPlat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PartPlat.Designer.cs" />
+    <Compile Include="UserControls\PartSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PartSet.Designer.cs" />
+    <Compile Include="UserControls\PhotoSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PhotoSet.Designer.cs" />
+    <Compile Include="UserControls\PositionCoord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PositionCoord.Designer.cs" />
+    <Compile Include="UserControls\SheldMsg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SheldMsg.Designer.cs" />
+    <Compile Include="UserControls\SingleVelocity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SingleVelocity.Designer.cs" />
+    <Compile Include="UserControls\Velocity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Velocity.Designer.cs" />
+    <EmbeddedResource Include="Forms\ParameterForm.resx">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaskForm.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControls\AOffsetControl.resx" />
+    <EmbeddedResource Include="UserControls\AutoAngle.resx" />
+    <EmbeddedResource Include="UserControls\AxisDisplay.resx" />
+    <EmbeddedResource Include="UserControls\CameraSet.resx" />
+    <EmbeddedResource Include="UserControls\HolderOffset.resx" />
+    <EmbeddedResource Include="UserControls\HolderPlat.resx" />
+    <EmbeddedResource Include="UserControls\IOControl.resx" />
+    <EmbeddedResource Include="UserControls\OffsetControl.resx" />
+    <EmbeddedResource Include="UserControls\OpticalSet.resx" />
+    <EmbeddedResource Include="UserControls\Other.resx" />
+    <EmbeddedResource Include="UserControls\PartCheck.resx" />
+    <EmbeddedResource Include="UserControls\PartName.resx" />
+    <EmbeddedResource Include="UserControls\PartPlat.resx" />
+    <EmbeddedResource Include="UserControls\PartSet.resx" />
+    <EmbeddedResource Include="UserControls\PhotoSet.resx" />
+    <EmbeddedResource Include="UserControls\PositionCoord.resx" />
+    <EmbeddedResource Include="UserControls\SheldMsg.resx" />
+    <EmbeddedResource Include="UserControls\SingleVelocity.resx" />
+    <EmbeddedResource Include="UserControls\Velocity.resx" />
+    <None Include="Icons\IconSet.gfie" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\57e64043729d7.png" />
+    <Content Include="Icons\ActiveNode.png" />
+    <Content Include="Icons\Add.png" />
+    <Content Include="Icons\align-horizontal-bottom-out.ico" />
+    <Content Include="Icons\align-horizontal-center-2.ico" />
+    <Content Include="Icons\align-horizontal-left-out.ico" />
+    <Content Include="Icons\align-horizontal-left.ico" />
+    <Content Include="Icons\align-horizontal-right-2.ico" />
+    <Content Include="Icons\align-horizontal-right-out.ico" />
+    <Content Include="Icons\align-horizontal-top-out.ico" />
+    <Content Include="Icons\align-vertical-bottom-2.ico" />
+    <Content Include="Icons\align-vertical-center-2.ico" />
+    <Content Include="Icons\align-vertical-top-2.ico" />
+    <Content Include="Icons\Align.png" />
+    <Content Include="Icons\AND.png" />
+    <Content Include="Icons\archive-insert-directory-2.ico" />
+    <Content Include="Icons\ArcTool.png" />
+    <Content Include="Icons\arrow-down-2.ico" />
+    <Content Include="Icons\arrow-down-3.ico" />
+    <Content Include="Icons\arrow-down-double-2.ico" />
+    <Content Include="Icons\arrow-down-double-3.ico" />
+    <Content Include="Icons\arrow-down-double.ico" />
+    <Content Include="Icons\arrow-down.ico" />
+    <Content Include="Icons\arrow-left-2.ico" />
+    <Content Include="Icons\arrow-left-3.ico" />
+    <Content Include="Icons\arrow-left-double-2.ico" />
+    <Content Include="Icons\arrow-left-double-3.ico" />
+    <Content Include="Icons\arrow-left-double.ico" />
+    <Content Include="Icons\arrow-left.ico" />
+    <Content Include="Icons\arrow-right-2.ico" />
+    <Content Include="Icons\arrow-right-3.ico" />
+    <Content Include="Icons\arrow-right-double-2.ico" />
+    <Content Include="Icons\arrow-right-double-3.ico" />
+    <Content Include="Icons\arrow-right-double.ico" />
+    <Content Include="Icons\arrow-right.ico" />
+    <Content Include="Icons\arrow-up-2.ico" />
+    <Content Include="Icons\arrow-up-3.ico" />
+    <Content Include="Icons\arrow-up-double-2.ico" />
+    <Content Include="Icons\arrow-up-double-3.ico" />
+    <Content Include="Icons\arrow-up-double.ico" />
+    <Content Include="Icons\arrow-up.ico" />
+    <Content Include="Icons\back.PNG" />
+    <Content Include="Icons\BezierTool.png" />
+    <Content Include="Icons\camera.PNG" />
+    <Content Include="Icons\CircleTool.png" />
+    <Content Include="Icons\Contour.png" />
+    <Content Include="Icons\copy.PNG" />
+    <Content Include="Icons\Cut.PNG" />
+    <Content Include="Icons\Delete.png" />
+    <Content Include="Icons\DepthofCut.png" />
+    <Content Include="Icons\DepthofCut2.png" />
+    <Content Include="Icons\dialog-apply.ico" />
+    <Content Include="Icons\dialog-cancel-3.ico" />
+    <Content Include="Icons\dialog-more.ico" />
+    <Content Include="Icons\distribute-horizontal-center.ico" />
+    <Content Include="Icons\distribute-horizontal-equal.ico" />
+    <Content Include="Icons\distribute-horizontal-left.ico" />
+    <Content Include="Icons\distribute-horizontal-margin.ico" />
+    <Content Include="Icons\distribute-horizontal-right.ico" />
+    <Content Include="Icons\distribute-horizontal-x.ico" />
+    <Content Include="Icons\distribute-horozontal-page.ico" />
+    <Content Include="Icons\distribute-vertical-bottom.ico" />
+    <Content Include="Icons\distribute-vertical-center.ico" />
+    <Content Include="Icons\distribute-vertical-equal.ico" />
+    <Content Include="Icons\distribute-vertical-margin.ico" />
+    <Content Include="Icons\distribute-vertical-page.ico" />
+    <Content Include="Icons\distribute-vertical-top.ico" />
+    <Content Include="Icons\distribute-vertical-y.ico" />
+    <Content Include="Icons\document-export.ico" />
+    <Content Include="Icons\document-import-2.ico" />
+    <Content Include="Icons\document-import.ico" />
+    <Content Include="Icons\document-new-4.ico" />
+    <Content Include="Icons\document-open-2.ico" />
+    <Content Include="Icons\document-open-5.ico" />
+    <Content Include="Icons\document-save-2.ico" />
+    <Content Include="Icons\document-save-5.ico" />
+    <Content Include="Icons\document-save-as-2.ico" />
+    <Content Include="Icons\document-save-as-5.ico" />
+    <Content Include="Icons\Down.png" />
+    <Content Include="Icons\draw-bezier-curves.ico" />
+    <Content Include="Icons\draw-circle-2.ico" />
+    <Content Include="Icons\draw-freehand.ico" />
+    <Content Include="Icons\draw-polygon-2.ico" />
+    <Content Include="Icons\draw-polyline-2.ico" />
+    <Content Include="Icons\draw-rectangle-2.ico" />
+    <Content Include="Icons\draw-star-2.ico" />
+    <Content Include="Icons\drawing.png" />
+    <Content Include="Icons\Drill.png" />
+    <Content Include="Icons\edit-add-2.ico" />
+    <Content Include="Icons\edit.PNG" />
+    <Content Include="Icons\Erect.PNG" />
+    <Content Include="Icons\exit.PNG" />
+    <Content Include="Icons\FastForward.png" />
+    <Content Include="Icons\Front.PNG" />
+    <Content Include="Icons\Gcode.PNG" />
+    <Content Include="Icons\grid.PNG" />
+    <Content Include="Icons\group.PNG" />
+    <Content Include="Icons\help.PNG" />
+    <Content Include="Icons\Home %282%29.bmp" />
+    <Content Include="Icons\home.bmp" />
+    <Content Include="Icons\home.PNG" />
+    <Content Include="Icons\Inflate.png" />
+    <Content Include="Icons\Intersection.png" />
+    <Content Include="Icons\Isometric.PNG" />
+    <Content Include="Icons\JoinVectors.png" />
+    <Content Include="Icons\left.PNG" />
+    <Content Include="Icons\LineTool.png" />
+    <Content Include="Icons\list-add-3.ico" />
+    <Content Include="Icons\list-remove-3.ico" />
+    <Content Include="Icons\list-remove-5.ico" />
+    <Content Include="Icons\log.PNG" />
+    <Content Include="Icons\measure.ico" />
+    <Content Include="Icons\merge.PNG" />
+    <Content Include="Icons\Mirror2.png" />
+    <Content Include="Icons\Move2.png" />
+    <Content Include="Icons\Move3.png" />
+    <Content Include="Icons\Node.png" />
+    <Content Include="Icons\NodeGroup.png" />
+    <Content Include="Icons\NodePath.png" />
+    <Content Include="Icons\NodePointer.png" />
+    <Content Include="Icons\NodeSegment.png" />
+    <Content Include="Icons\Offset2.png" />
+    <Content Include="Icons\ParentNode.png" />
+    <Content Include="Icons\paste.PNG" />
+    <Content Include="Icons\Pause.png" />
+    <Content Include="Icons\pe.PNG" />
+    <Content Include="Icons\Play.png" />
+    <Content Include="Icons\plugin.PNG" />
+    <Content Include="Icons\Pocket.png" />
+    <Content Include="Icons\Pointer.png" />
+    <Content Include="Icons\project.PNG" />
+    <Content Include="Icons\recent.PNG" />
+    <Content Include="Icons\Redo.PNG" />
+    <Content Include="Icons\RegularPoly.png" />
+    <Content Include="Icons\RegularPolygon.png" />
+    <Content Include="Icons\Remove.png" />
+    <Content Include="Icons\Replicate.png" />
+    <Content Include="Icons\ReversePath.png" />
+    <Content Include="Icons\rfxICON.ico" />
+    <Content Include="Icons\right.PNG" />
+    <Content Include="Icons\Rotate.png" />
+    <Content Include="Icons\Rotate2.png" />
+    <Content Include="Icons\Scale.png" />
+    <Content Include="Icons\Scale2.png" />
+    <Content Include="Icons\Scale3.png" />
+    <Content Include="Icons\setting.PNG" />
+    <Content Include="Icons\simu.PNG" />
+    <Content Include="Icons\Spline.png" />
+    <Content Include="Icons\Star.png" />
+    <Content Include="Icons\start.bmp" />
+    <Content Include="Icons\Text.png" />
+    <Content Include="Icons\ToBeginning.png" />
+    <Content Include="Icons\ToEnd.png" />
+    <Content Include="Icons\ToolBreakChain.png" />
+    <Content Include="Icons\ToolChain.png" />
+    <Content Include="Icons\Toolpaths.png" />
+    <Content Include="Icons\Toolpaths2.png" />
+    <Content Include="Icons\top.PNG" />
+    <Content Include="Icons\transform-move.ico" />
+    <Content Include="Icons\transform-rotate-2.ico" />
+    <Content Include="Icons\transform-scale-2.ico" />
+    <Content Include="Icons\transform-scale-textbox-points.ico" />
+    <Content Include="Icons\transform-shear-down.ico" />
+    <Content Include="Icons\transform-shear-left.ico" />
+    <Content Include="Icons\transform-shear-right.ico" />
+    <Content Include="Icons\transform-shear-up.ico" />
+    <Content Include="Icons\Undo.PNG" />
+    <Content Include="Icons\ungroup.PNG" />
+    <Content Include="Icons\Union.png" />
+    <Content Include="Icons\Up.png" />
+    <Content Include="Icons\view.PNG" />
+    <Content Include="Icons\View_Back.png" />
+    <Content Include="Icons\View_Bottom.png" />
+    <Content Include="Icons\View_Front.png" />
+    <Content Include="Icons\View_Isometric.png" />
+    <Content Include="Icons\View_Left.png" />
+    <Content Include="Icons\View_Right.png" />
+    <Content Include="Icons\View_Top.png" />
+    <Content Include="Icons\windows.PNG" />
+    <Content Include="Icons\XOR.png" />
+    <Content Include="Icons\zoom-fit-best-2.ico" />
+    <Content Include="Icons\zoom-fit-best-4.ico" />
+    <Content Include="Icons\zoom-fit-height.ico" />
+    <Content Include="Icons\zoom-fit-width.ico" />
+    <Content Include="Icons\zoom-in-3.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

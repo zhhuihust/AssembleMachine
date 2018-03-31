@@ -1,0 +1,80 @@
+DVAR $PARTINDEX,$STATEINDEX
+
+$PARTINDEX=$GLOBAL[27]
+$STATEINDEX=$GLOBAL[28]
+
+ACKNOWLEDGEALL
+
+CRITICAL END
+AUTOFOCUS Z OFF
+VELOCITY OFF
+     
+$DO[8].YY=0     '上光源     
+$DO[9].YY=0     '下光源     
+$DO[10].YY=0    '打胶     
+$DO[11].YY=0    'UV光
+$DO[8].Z=0   '夹具气检
+   
+$DO[9].X=0    '打胶气缸
+WHILE $DI[8].THETA==0
+   DWELL 0.01
+ENDWHILE
+     
+$DO[10].X=0    '夹爪气缸
+WHILE $DI[10].THETA==0
+   DWELL 0.01
+ENDWHILE       
+
+IF (($STATEINDEX==4)||($STATEINDEX==5)||($STATEINDEX==6)||($STATEINDEX==15)) THEN
+   $DO[8].Y=1       '吸笔吸气
+ELSE
+   $DO[8].Y=0
+ENDIF
+
+$DO[9].Y=0          '吸笔破坏
+
+IF $STATEINDEX<7 THEN
+   IF $PARTINDEX==0 THEN      
+      $DO[10].Y=0   '产品吸气
+   ELSE      
+      $DO[10].Y=1   
+   ENDIF 
+ELSE IF $STATEINDEX<10 THEN
+   $DO[10].Y=1
+ELSE
+   $DO[10].Y=0
+ENDIF
+
+IF (($STATEINDEX==12)||($STATEINDEX==15)) THEN
+   $DO[11].Y=1    '产品破坏
+   DWELL 1
+ELSE
+   $DO[11].Y=0
+ENDIF
+
+IF (($STATEINDEX==3)||($STATEINDEX==4)||($STATEINDEX==5)||($STATEINDEX==7)||($STATEINDEX==16)) THEN
+   $DO[8].X=0     '限位气缸
+ELSE
+   $DO[8].X=1
+ENDIF
+
+IF $STATEINDEX==12 THEN
+   $DO[11].X=1    '夹爪
+ELSE
+   $DO[11].X=0
+ENDIF
+
+$DO[9].Z=0        '模组冷却
+
+IF ((($STATEINDEX>2)&&($STATEINDEX<8))||(($STATEINDEX>13)&&($STATEINDEX<17))) THEN
+   $DO[10].Z=0    '快换1
+   $DO[11].Z=1    '快换2
+ELSE
+   $DO[10].Z=1
+   $DO[11].Z=0
+ENDIF
+
+END PROGRAM
+
+':ENDFLOW
+'END PROGRAM
